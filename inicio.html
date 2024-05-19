@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/output.css">
+    <!-- Enlaces de Swiper.js y FontAwesome -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Fernando's Store</title>
+    <style>
+        /* Animaciones para los enlaces */
+        .nav-link {
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #1d4ed8;
+            transform: scale(1.1);
+        }
+        /* Animaciones para las tarjetas */
+        .card {
+            transition: transform 0.6s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+
+    <!-- Barra de navegación -->
+    <nav class="bg-white dark:bg-gray-800 shadow-md fixed w-full z-20 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h2 class="dark:text-white font-extrabold text-2xl">Fernando's Store</h2>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="/inicio.html" class="nav-link text-gray-800 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-xl font-bold">Inicio</a>
+                        <a href="/src/productos.html" class="nav-link text-gray-800 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-xl font-bold">Producto</a>
+                        <a href="/src/contacto.html" class="nav-link text-gray-800 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-xl font-bold">Contacto</a>
+                    </div>
+                </div>
+                <div class="flex md:hidden">
+                    <button id="mobile-menu-button" class="bg-gray-200 dark:bg-gray-700 p-2 rounded-md inline-flex items-center justify-center text-gray-800 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú móvil -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="/inicio.html" class="nav-link text-gray-800 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 rounded-md text-base font-bold">Inicio</a>
+                <a href="/src/productos.html" class="nav-link text-gray-800 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 rounded-md text-base font-bold">Producto</a>
+                <a href="/src/contacto.html" class="nav-link text-gray-800 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 rounded-md text-base font-bold">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+        <h2 class="flex justify-center mb-4 pt-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">Bienvenido</h2>
+        <!-- Carrusel de imágenes -->
+        <div class="relative w-full h-64 sm:h-96 lg:h-[500px] overflow-hidden rounded-lg shadow-lg mb-8">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="/assets/Img/16HBlineaROja.jpg" alt="Imagen 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/assets/Img/02kk.jpg" alt="Imagen 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/assets/Img/03AX.jpg" alt="Imagen 3">
+                    </div>
+                </div>
+                <!-- Agregar controles de navegación -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+
+        <!-- Información del sitio web -->
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 mb-4 text-center">
+                Sobre Nosotros
+            </h2>
+            <p class="text-gray-700 dark:text-gray-300 mb-6">
+                Bienvenidos a Fernando's Store, su destino final para ropa de alta calidad. Nos enorgullecemos de ofrecer productos excepcionales a precios accesibles, asegurando que cada cliente obtenga el mejor valor posible. Nuestra prioridad es brindarle una experiencia de compra única con una entrega física rápida y eficiente. Explore nuestra colección y descubra diseños increíbles que destacan por su creatividad y detalle.
+            </p>
+
+            <!-- Sección de íconos -->
+            <div class="flex justify-around mb-4">
+                <div class="text-center">
+                    <i class="fas fa-thumbs-up fa-3x text-blue-500 mb-2"></i>
+                    <h3 class="text-lg font-medium">Alta Calidad</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Solo los mejores productos.</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-dollar-sign fa-3x text-green-500 mb-2"></i>
+                    <h3 class="text-lg font-medium">Precios Accesibles</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Productos de alta calidad a precios justos.</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-paint-brush fa-3x text-yellow-500 mb-2"></i>
+                    <h3 class="text-lg font-medium">Diseños Increíbles</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Creatividad y detalle en cada prenda.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inicialización de Swiper.js -->
+    <script src="/assets/JS/01.js">
+    </script>
+</body>
+</html>
